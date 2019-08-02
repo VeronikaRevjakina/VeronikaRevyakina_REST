@@ -9,6 +9,7 @@ import io.restassured.specification.RequestSpecification;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
+import static utils.FileUtils.getDomain;
 import static utils.FileUtils.readSpellarURLFromFile;
 
 public class YandexSpellerService {
@@ -19,11 +20,6 @@ public class YandexSpellerService {
                 .setBaseUri(getDomain())
                 .addFilter(new RequestLoggingFilter())
                 .addFilter(new ResponseLoggingFilter()).build();
-    }
-
-    public static String getDomain(){
-        return readSpellarURLFromFile(YandexSpellerConstants.PATH_TO_PROPERTIES)
-                .getProperty("domain");
     }
 
     public Response checkWord(String uri,String word) {
