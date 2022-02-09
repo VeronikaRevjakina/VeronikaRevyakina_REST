@@ -26,7 +26,7 @@ public class CheckSpellerStatusCodeAndPerformance {
     private final String CORRECTFORM2 = "cucumbers";
     private final String CORRECTFORM3 = "cucomber";
 
-    private final String DOMAIN = getDomain();
+    private final String DOMAIN = "domain";
     private final String CHECKTEXT_ENDPOINT = DOMAIN +
             YandexSpellerConstants.CHECK_TEXT_URI;
 
